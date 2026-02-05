@@ -8,25 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="box">
-        <div class="agecnvt">
+    <div class="main">
+        <div class="box">
+            <div class="agecnvt">
             <label class="text-dark ">Age:</label>
             <input type="text" id="ageInput" placeholder="Enter Your Age" >
         </div>
         <div class="result">
-            <button class="btn btn-secondary" id="checkAgeBtn">Convert Age </button>
-           <label class="text-dark ">Result: <input type="text" id="ageOutput"></label>
+            <button class="btn btn-secondary" id="checkAgeBtn" onclick="myFunction1(event)">Convert Age </button>
+           <label class="text-dark ">Result: <input type="text" id="ageOutput" readonly></label>
         </div>
     </div>
-    <!-- <output id="outputElement">Age</output> -->
+       <div class="box">
+        <div class="agecnvt">
+            <label class="text-dark ">Hours:</label>
+            <input type="text" id="hoursInput" placeholder="Enter Hours" >
+        </div>
+        <div class="result">
+            <button class="btn btn-secondary" id="checkHoursBtn" onclick="myFunction2(event)">Convert Hours </button>
+           <label class="text-dark ">Result: <input type="text" id="hoursOutput" readonly></label>
+        </div>
+    </div>
+        </div>
 
-    
 
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
