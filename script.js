@@ -16,6 +16,10 @@ function myFunction1(e) {
 function myFunction2(e) {
     e.preventDefault();
     let hoursInput = document.getElementById("hoursInput").value;
+    if(!/^\d+$/.test(hoursInput))
+    alert('Invalid Input');
+    else
+    {
     let hoursOutput = hoursInput * 3600;
     document.getElementById("hoursOutput").value = hoursOutput + " Seconds";
-}
+}}
