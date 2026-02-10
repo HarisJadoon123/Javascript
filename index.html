@@ -29,10 +29,8 @@
            <label class="text-dark ">Result: <input type="text" id="hoursOutput" readonly  placeholder=" in seconds"></label>
         </div>
     </div>
-        </div>
-    <div class="main mt-5">
-        <div class="box">
-            <div class="agecnvt">
+    <div class="box">
+        <div class="agecnvt">
             <label class="text-dark ">Numbers:</label>
             <input type="text" id="num" placeholder=" 1,2,3,4...." >
             <div>
@@ -42,10 +40,12 @@
         </div>
         <div class="result">
             <button class="btn btn-secondary" onclick="myFunction3(event)">Find Next:</button>
-           <label class="text-dark ">Result: <input type="text" id="output" readonly ></label> 
+            <label class="text-dark ">Result: <input type="text" id="output" readonly ></label> 
         </div>
     </div>
-
+</div>
+        
+        <div class="main mt-5">
            <div class="box">
         <div class="agecnvt">
             <label class="text-dark ">Name:</label>
@@ -56,35 +56,52 @@
            <label class="text-dark ">Result: <input type="text" id="nameOutput" readonly  placeholder="Sentence case"></label>
         </div>
     </div>
-    </div>
-
-        <div class="main mt-5">
-        <div class="box">
-            <div class="agecnvt">
+    <div class="box">
+        <div class="agecnvt">
             <label class="text-dark ">Enter Weight:</label>
             <input type="text" id="weightInput" placeholder=" in kg" >
             <div>
                 <label class="text-dark mt-2">Enter Height:</label>
-                <input type="text" id="heightInput" placeholder=" in cm" >
+                <input type="text" id="heightInput" placeholder=" in meter" >
             </div>
         </div>
         <div class="result">
-            <button class="btn btn-secondary" onclick="myFunction3(event)">Find Next:</button>
-           <label class="text-dark ">Result: <input type="text" id="output" readonly ></label> 
+            <button class="btn btn-secondary" onclick="myFunction5(event)">Find BMI:</button>
+           <label class="text-dark ">BMI: <input type="text" id="bmiOutput" readonly ></label> 
         </div>
     </div>
 
            <div class="box">
         <div class="agecnvt">
-            <label class="text-dark ">Name:</label>
-            <input type="text" id="nameInput" placeholder=" Enter name in lowercase" >
+            <label class="text-dark ">Array:</label>
+            <input type="text" id="arrayInput" placeholder=" Array Generates Here" >
         </div>
         <div class="result">
-            <button class="btn btn-secondary" onclick="myFunction4(event)">Convert Name </button>
-           <label class="text-dark ">Result: <input type="text" id="nameOutput" readonly  placeholder="Sentence case"></label>
+            <button class="btn btn-secondary" onclick="myFunction6(event)">Generate Array</button>
+            <label class="text-dark ">First Digit: <input type="text" id="firstOutput" readonly ></label>
+            <label class="text-dark ">last Digit: <input type="text" id="lastOutput" readonly ></label>
         </div>
     </div>
+</div>
+
+
+<main class="d-flex justify-content-center my-5">
+    <div class="box" >
+        <div class="agecnvt ms-3">
+            <label class="text-dark ">First Number:</label>
+            <input type="text" id="firstNum" class="w-50" >
+            <div>
+                <label class="text-dark mt-2">Second Number:</label>
+                <input type="text " id="secondNum" class="w-50" >
+            </div>
+        </div>
+        <div class="result">
+            <label class="text-dark">Result: <input type="text" id="resultOutput" readonly ></label> 
+        </div>
     </div>
+</main>
+
+
 
 
 

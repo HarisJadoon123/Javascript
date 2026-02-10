@@ -4,10 +4,9 @@
 function myFunction1(e) {
     e.preventDefault();
     let ageInput = document.getElementById("ageInput").value;
-    if(!/^\d+$/.test(ageInput))
+    if (!/^\d+$/.test(ageInput))
         alert('Invalid Input');
-    else
-    {
+    else {
         let ageOutput = ageInput * 365;
         document.getElementById("ageOutput").value = ageOutput + " Days";
     }
@@ -15,14 +14,14 @@ function myFunction1(e) {
 function myFunction2(e) {
     e.preventDefault();
     let hoursInput = document.getElementById("hoursInput").value;
-    if(!/^\d+$/.test(hoursInput))
-    alert('Invalid Input');
-    else
-    {
-    let hoursOutput = hoursInput * 3600;
-    document.getElementById("hoursOutput").value = hoursOutput + " Seconds";
+    if (!/^\d+$/.test(hoursInput))
+        alert('Invalid Input');
+    else {
+        let hoursOutput = hoursInput * 3600;
+        document.getElementById("hoursOutput").value = hoursOutput + " Seconds";
 
-}}
+    }
+}
 
 
 function myFunction3(e) {
@@ -37,12 +36,12 @@ function myFunction3(e) {
 
     if (index >= 0 && index < arr.length - 1)                                 // 5. Result dikhao
         document.getElementById("output").value = arr[index + 1];
-     else 
+    else
         document.getElementById("output").value = findNum + 1;
 }
 
 function myFunction4(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     let name = document.getElementById("nameInput").value;
     if (name.trim() === "") {
         document.getElementById("nameOutput").value = "Please enter a name";
@@ -52,8 +51,39 @@ function myFunction4(e) {
     document.getElementById("nameOutput").value = formattedName;
 }
 
-function myFunction5{
+function myFunction5(e) {
     e.preventDefault();
-    
+    let weight = document.getElementById("weightInput").value;
+    let height = document.getElementById("heightInput").value;
+    let bmi = weight / (height * height);
+    document.getElementById("bmiOutput").value = bmi;
 }
 
+function myFunction6(e) {
+    e.preventDefault();
+    let arr = [];
+    let length = Math.floor(Math.random() * 10 + 1);
+    for (let i = 0; i < length; i++) {
+        arr.push(Math.floor(Math.random() * 100));
+    }
+    document.getElementById("arrayInput").value = arr;
+    document.getElementById("firstOutput").value = arr[0];
+    document.getElementById("lastOutput").value = arr[length - 1];
+}
+
+let a = document.getElementById("firstNum");
+let b = document.getElementById("secondNum");
+
+a.addEventListener("input", myfunction7);
+b.addEventListener("input", myfunction7);
+
+function myfunction7() {
+    let first = Number(a.value);
+    let second = Number(b.value);
+
+    if (a.value != "" && b.value == "") {
+        document.getElementById("resultOutput").value = NaN;
+    } else {
+        document.getElementById("resultOutput").value = first + second;
+    }
+}
