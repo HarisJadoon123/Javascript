@@ -26,6 +26,8 @@ function myFunction2(e) {
 
 function myFunction3(e) {
     e.preventDefault();
+    let num3 = document.getElementById("num3").value;
+    let snum = Number(num3)
     let numbers = document.getElementById("num").value;             // 1. Numbers input lo
 
     let findNum = Number(document.getElementById("num2").value);        // 2. Search number lo
@@ -37,19 +39,32 @@ function myFunction3(e) {
     if (index >= 0 && index < arr.length - 1)                                 // 5. Result dikhao
         document.getElementById("output").value = arr[index + 1];
     else
-        document.getElementById("output").value = findNum + 1;
+        document.getElementById("output").value = "not in the array";
+    if (num3 !== "") {
+        let result;
+        if (Number.isInteger(snum)) {
+            result = snum + 1;
+        } else {
+            result = snum + 0.1;
+        }
+        document.getElementById("output").value = result;
+    }
 }
 
 function myFunction4(e) {
     e.preventDefault();
     let name = document.getElementById("nameInput").value;
-    if (name.trim() === "") {
-        document.getElementById("nameOutput").value = "Please enter a name";
-        return;
+    let words = name.split(" ");   
+    let result = "";
+    for (let i = 0; i < words.length; i++) {
+        if (words[i] !== "") {
+            result += words[i][0].toUpperCase() + words[i].slice(1).toLowerCase() + " ";
+        }
     }
-    let formattedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-    document.getElementById("nameOutput").value = formattedName;
+    document.getElementById("nameOutput").value = result;
 }
+
+
 
 function myFunction5(e) {
     e.preventDefault();
